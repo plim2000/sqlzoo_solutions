@@ -26,7 +26,6 @@ SELECT population
 FROM world
 WHERE name = 'Germany'
 ```
-
 ### 2.
 ```sql
 SELECT name, population
@@ -38,5 +37,73 @@ WHERE name IN ('Sweden', 'Norway', 'Denmark');
 SELECT name, area
 FROM world
 WHERE area BETWEEN 200000 AND 250000
+```
+
+## SELECT names
+### 1.
+```sql
+SELECT name
+FROM world
+WHERE name LIKE 'Y%'
+```
+### 2.
+```sql
+SELECT name
+FROM world
+WHERE name LIKE '%y'
+```
+### 3.
+```sql
+SELECT name
+FROM world
+WHERE name LIKE '%x%'
+```
+### 4.
+```sql
+
+```
+### 5.
+```sql
+
+```
+### 6.
+```sql
+
+```
+### 7.
+```sql
+
+```
+### 8.
+```sql
+
+```
+### 9.
+```sql
+
+```
+### 10.
+```sql
+
+```
+### 11.
+```sql
+
+```
+### 12.
+```sql
+
+```
+### 13.
+```sql
+
+```
+### 14.
+```sql
+
+```
+### 15.
+```sql
+
 ```
 
