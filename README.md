@@ -296,3 +296,67 @@ WHERE winner like 'Sir%'
 ORDER BY yr DESC, winner
 ```
 
+## SELECT within SELECT
+### 1.
+```sql
+SELECT name 
+FROM world
+WHERE population >
+  (SELECT population 
+  FROM world
+  WHERE name='Russia')
+```
+### 2.
+```sql
+SELECT name
+FROM world
+WHERE continent = 'Europe' AND GDP/population > (SELECT GDP/POPULATION
+                                                 FROM world
+                                                 WHERE name = 'United Kingdom')
+```
+### 3.
+```sql
+SELECT name, continent
+FROM world
+WHERE continent IN (SELECT DISTINCT continent FROM world WHERE name in ('Argentina','Australia'))
+ORDER BY name
+```
+### 4.
+```sql
+SELECT name, population
+FROM world
+WHERE population > (SELECT population FROM world WHERE name = 'United Kingdom')
+  AND population < (SELECT population FROM world WHERE name = 'Germany')
+```
+### 5.
+```sql
+SELECT name, CONCAT(ROUND(population/(SELECT population FROM world WHERE name = 'Germany')*100,0),'%') AS percentage
+FROM world
+WHERE continent = 'Europe'
+```
+### 6.
+```sql
+SELECT name
+FROM world
+WHERE gdp > ALL(SELECT gdp FROM world WHERE CONTINENT = 'Europe' AND gdp >= 0)
+```
+### 7.
+```sql
+SELECT continent, name, area 
+FROM world AS x
+WHERE population >= ALL(SELECT population 
+                        FROM world AS y
+                        WHERE y.continent=x.continent AND y.population>0)
+```
+### 8.
+```sql
+
+```
+### 9.
+```sql
+
+```
+### 10.
+```sql
+
+```
