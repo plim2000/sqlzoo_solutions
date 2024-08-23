@@ -11,17 +11,18 @@ Documenting my SQLZoo solutions.
 6. [JOIN](#join)
 7. [More JOIN operations](#more-join-operations)
 8. [Using Null](#using-null)
-8+. [Numeric Examples](#numeric-examples)
-9-. [Window function](#window-function)
-9+. [COVID 19](#covid-19)
-9. [Self join](#self-join)
-10. [Tutorial Quizzes](#tutorial-quizzews)
-11. [Tutorial Student Records](#tutorial-student-records)
-12. [Tutorial DDL](#tutorial-ddl)
+9. [Numeric Examples](#numeric-examples)
+10. [Window function](#window-function)
+11. [COVID 19](#covid-19)
+12. [Self join](#self-join)
+13. [Tutorial Quizzes](#tutorial-quizzews)
+14. [Tutorial Student Records](#tutorial-student-records)
+15. [Tutorial DDL](#tutorial-ddl)
 
 ## SELECT basics
+
+### Solution 1
 ```sql
---
 SELECT population 
 FROM world
 WHERE name = 'Germany'
