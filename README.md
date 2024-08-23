@@ -20,13 +20,13 @@ Documenting my [SQLZoo](https://sqlzoo.net/wiki/SQL_Tutorial) solutions.
 15. [Tutorial DDL](#tutorial-ddl)
 
 ## SELECT basics
-
 ### 1.
 ```sql
 SELECT population 
 FROM world
 WHERE name = 'Germany'
 ```
+
 ### 2.
 ```sql
 SELECT name, population
