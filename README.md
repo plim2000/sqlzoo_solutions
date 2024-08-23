@@ -368,7 +368,7 @@ WHERE 25000000 >= ALL(SELECT population
 ```sql
 SELECT name, continent
 FROM world w1
-WHERE population >= ALL(SELECT 3*population
+WHERE population >= ALL(SELECT 3 * population
                         FROM world w2
                         WHERE w1.continent = w2.continent AND w1.name != w2.name)
 ```
