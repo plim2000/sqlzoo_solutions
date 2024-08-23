@@ -39,7 +39,7 @@ FROM world
 WHERE area BETWEEN 200000 AND 250000
 ```
 
-## SELECT names
+## SELECT name
 ### 1.
 ```sql
 SELECT name
