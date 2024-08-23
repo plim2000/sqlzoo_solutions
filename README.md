@@ -1,5 +1,5 @@
 # SQLZoo Solutions
-Documenting my SQLZoo solutions.
+Documenting my [SQLZoo](https://sqlzoo.net/wiki/SQL_Tutorial) solutions.
 
 ## Sections
 0. [SELECT basics](#select-basics)
