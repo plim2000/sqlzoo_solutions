@@ -15,9 +15,6 @@ Documenting my [SQLZoo](https://sqlzoo.net/wiki/SQL_Tutorial) solutions.
 10. [Window function](#window-function)
 11. [COVID 19](#covid-19)
 12. [Self join](#self-join)
-13. [Tutorial Quizzes](#tutorial-quizzews)
-14. [Tutorial Student Records](#tutorial-student-records)
-15. [Tutorial DDL](#tutorial-ddl)
 
 ## SELECT basics
 ### 1.
