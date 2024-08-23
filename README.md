@@ -21,7 +21,7 @@ Documenting my [SQLZoo](https://sqlzoo.net/wiki/SQL_Tutorial) solutions.
 
 ## SELECT basics
 
-### Solution 1
+### 1.
 ```sql
 SELECT population 
 FROM world
