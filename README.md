@@ -215,3 +215,84 @@ WHERE name LIKE '%a%'
   AND name NOT LIKE '% %'
 ```
 
+## SELECT from Nobel
+### 1.
+```sql
+SELECT yr, subject, winner
+FROM nobel
+WHERE yr = 1950
+```
+### 2.
+```sql
+SELECT winner
+FROM nobel
+WHERE yr = 1962 AND subject = 'literature'
+```
+### 3.
+```sql
+SELECT yr, subject
+FROM nobel
+WHERE winner = 'Albert Einstein'
+```
+### 4.
+```sql
+SELECT winner
+FROM nobel
+WHERE subject = 'peace' AND yr >= 2000
+```
+### 5.
+```sql
+SELECT yr, subject, winner
+FROM nobel
+WHERE subject = 'literature' AND yr BETWEEN 1980 AND 1989
+```
+### 6.
+```sql
+SELECT * 
+FROM nobel
+WHERE winner in ('Theodore Roosevelt', 'Woodrow Wilson', 'Jimmy Carter', 'Barack Obama')
+```
+### 7.
+```sql
+SELECT winner
+FROM nobel
+WHERE winner like 'John%'
+```
+### 8.
+```sql
+SELECT *
+FROM nobel
+WHERE (subject = 'physics' AND yr = 1980) OR (subject = 'chemistry' AND yr = 1984)
+```
+### 9.
+```sql
+SELECT *
+FROM nobel
+WHERE yr = 1980 AND subject NOT IN ('chemistry', 'medicine')
+```
+### 10.
+```sql
+SELECT *
+FROM nobel
+WHERE (subject = 'Medicine' AND yr < 1910) OR (subject = 'Literature' AND yr >= 2004)
+```
+### 11.
+```sql
+SELECT *
+FROM nobel
+WHERE winner = 'PETER GRÜNBERG'
+```
+### 12.
+```sql
+SELECT *
+FROM nobel
+WHERE winner = 'EUGENE O''NEILL'
+```
+### 13.
+```sql
+SELECT winner, yr, subject
+FROM nobel
+WHERE winner like 'Sir%'
+ORDER BY yr DESC, winner
+```
+
