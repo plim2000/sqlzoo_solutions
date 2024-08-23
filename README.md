@@ -342,15 +342,29 @@ WHERE gdp > ALL(SELECT gdp FROM world WHERE CONTINENT = 'Europe' AND gdp >= 0)
 ```
 ### 7.
 ```sql
-
+SELECT continent, name, area
+FROM world t1
+WHERE area = 
+    (SELECT MAX(area)
+     FROM world t2
+     WHERE t1.continent = t2.continent)
 ```
 ### 8.
 ```sql
-
+SELECT w1.continent, w1.name
+FROM world w1
+WHERE name = 
+    (SELECT MIN(w2.name)
+     FROM world w2
+     WHERE w1.continent = w2.continent)
 ```
 ### 9.
 ```sql
-
+SELECT name, continent, population 
+FROM world w1
+WHERE 25000000 >= ALL(SELECT population
+	                    FROM world w2
+                      WHERE w1.continent = w2.continent)
 ```
 ### 10.
 ```sql
