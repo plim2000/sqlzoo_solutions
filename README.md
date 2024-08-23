@@ -363,7 +363,7 @@ WHERE name =
 SELECT name, continent, population 
 FROM world w1
 WHERE 25000000 >= ALL(SELECT population
-	                    FROM world w2
+                      FROM world w2
                       WHERE w1.continent = w2.continent)
 ```
 ### 10.
