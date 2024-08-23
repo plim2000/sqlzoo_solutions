@@ -342,11 +342,7 @@ WHERE gdp > ALL(SELECT gdp FROM world WHERE CONTINENT = 'Europe' AND gdp >= 0)
 ```
 ### 7.
 ```sql
-SELECT continent, name, area 
-FROM world AS x
-WHERE population >= ALL(SELECT population 
-                        FROM world AS y
-                        WHERE y.continent=x.continent AND y.population>0)
+
 ```
 ### 8.
 ```sql
